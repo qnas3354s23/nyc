@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
+
 import { Badge } from "./ui/badge";
 import { toEther } from "thirdweb";
 import { useEffect, useState } from "react";
@@ -62,8 +65,7 @@ export function MarketSharesDisplay({
         if (newWinnings.A !== winnings.A || newWinnings.B !== winnings.B) {
             setWinnings(newWinnings);
         }
-    }, [sharesBalance, market.totalOptionAShares, market.totalOptionBShares]);
-
+      }, [calculateWinnings, market, winnings.A, winnings.B,sharesBalance]);
     const displayWinningsA = toFixed(Number(toEther(winnings.A)), 2);
     const displayWinningsB = toFixed(Number(toEther(winnings.B)), 2);
 

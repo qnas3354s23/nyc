@@ -1,4 +1,4 @@
-import type { SafeAreaInsets } from '@/types'
+import type { SafeAreaInsets } from '../../types';
 
 interface SafeAreaContainerProps {
   children: React.ReactNode
